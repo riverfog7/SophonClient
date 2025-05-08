@@ -26,3 +26,13 @@ It should look like this: `https://some-endpoint/some/path/to/api/getBuild?some=
    ```
 3. Wait for the download to finish.
 4. Enjoy the game!
+
+## TODO
+- [ ] Make code readable
+- [ ] Proper directory structure
+- [ ] Proper commenting
+- [ ] Proper error handling
+- [ ] Better CLI
+- [ ] Patch / Update implementation
+- [ ] Download throttling
+- [ ] Bindings for typescript / swift
