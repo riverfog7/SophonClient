@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v5.29.3
-// source: SophonManifestProto.proto
+// source: internal/protos/SophonManifestProto.proto
 
-package __
+package protos
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -30,7 +30,7 @@ type SophonManifestProto struct {
 
 func (x *SophonManifestProto) Reset() {
 	*x = SophonManifestProto{}
-	mi := &file_SophonManifestProto_proto_msgTypes[0]
+	mi := &file_internal_protos_SophonManifestProto_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -42,7 +42,7 @@ func (x *SophonManifestProto) String() string {
 func (*SophonManifestProto) ProtoMessage() {}
 
 func (x *SophonManifestProto) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonManifestProto_proto_msgTypes[0]
+	mi := &file_internal_protos_SophonManifestProto_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -55,7 +55,7 @@ func (x *SophonManifestProto) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonManifestProto.ProtoReflect.Descriptor instead.
 func (*SophonManifestProto) Descriptor() ([]byte, []int) {
-	return file_SophonManifestProto_proto_rawDescGZIP(), []int{0}
+	return file_internal_protos_SophonManifestProto_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *SophonManifestProto) GetAssets() []*SophonManifestAssetProperty {
@@ -78,7 +78,7 @@ type SophonManifestAssetProperty struct {
 
 func (x *SophonManifestAssetProperty) Reset() {
 	*x = SophonManifestAssetProperty{}
-	mi := &file_SophonManifestProto_proto_msgTypes[1]
+	mi := &file_internal_protos_SophonManifestProto_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -90,7 +90,7 @@ func (x *SophonManifestAssetProperty) String() string {
 func (*SophonManifestAssetProperty) ProtoMessage() {}
 
 func (x *SophonManifestAssetProperty) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonManifestProto_proto_msgTypes[1]
+	mi := &file_internal_protos_SophonManifestProto_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -103,7 +103,7 @@ func (x *SophonManifestAssetProperty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonManifestAssetProperty.ProtoReflect.Descriptor instead.
 func (*SophonManifestAssetProperty) Descriptor() ([]byte, []int) {
-	return file_SophonManifestProto_proto_rawDescGZIP(), []int{1}
+	return file_internal_protos_SophonManifestProto_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *SophonManifestAssetProperty) GetAssetName() string {
@@ -154,7 +154,7 @@ type SophonManifestAssetChunk struct {
 
 func (x *SophonManifestAssetChunk) Reset() {
 	*x = SophonManifestAssetChunk{}
-	mi := &file_SophonManifestProto_proto_msgTypes[2]
+	mi := &file_internal_protos_SophonManifestProto_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -166,7 +166,7 @@ func (x *SophonManifestAssetChunk) String() string {
 func (*SophonManifestAssetChunk) ProtoMessage() {}
 
 func (x *SophonManifestAssetChunk) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonManifestProto_proto_msgTypes[2]
+	mi := &file_internal_protos_SophonManifestProto_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -179,7 +179,7 @@ func (x *SophonManifestAssetChunk) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonManifestAssetChunk.ProtoReflect.Descriptor instead.
 func (*SophonManifestAssetChunk) Descriptor() ([]byte, []int) {
-	return file_SophonManifestProto_proto_rawDescGZIP(), []int{2}
+	return file_internal_protos_SophonManifestProto_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *SophonManifestAssetChunk) GetChunkName() string {
@@ -217,11 +217,11 @@ func (x *SophonManifestAssetChunk) GetChunkSizeDecompressed() int64 {
 	return 0
 }
 
-var File_SophonManifestProto_proto protoreflect.FileDescriptor
+var File_internal_protos_SophonManifestProto_proto protoreflect.FileDescriptor
 
-const file_SophonManifestProto_proto_rawDesc = "" +
+const file_internal_protos_SophonManifestProto_proto_rawDesc = "" +
 	"\n" +
-	"\x19SophonManifestProto.proto\"K\n" +
+	")internal/protos/SophonManifestProto.proto\"K\n" +
 	"\x13SophonManifestProto\x124\n" +
 	"\x06Assets\x18\x01 \x03(\v2\x1c.SophonManifestAssetPropertyR\x06Assets\"\xd8\x01\n" +
 	"\x1bSophonManifestAssetProperty\x12\x1c\n" +
@@ -235,27 +235,27 @@ const file_SophonManifestProto_proto_rawDesc = "" +
 	"\x18ChunkDecompressedHashMd5\x18\x02 \x01(\tR\x18ChunkDecompressedHashMd5\x12,\n" +
 	"\x11ChunkOnFileOffset\x18\x03 \x01(\x03R\x11ChunkOnFileOffset\x12\x1c\n" +
 	"\tChunkSize\x18\x04 \x01(\x03R\tChunkSize\x124\n" +
-	"\x15ChunkSizeDecompressed\x18\x05 \x01(\x03R\x15ChunkSizeDecompressedB\x03Z\x01.b\x06proto3"
+	"\x15ChunkSizeDecompressed\x18\x05 \x01(\x03R\x15ChunkSizeDecompressedB3Z1github.com/riverfog7/SophonClient/internal/protosb\x06proto3"
 
 var (
-	file_SophonManifestProto_proto_rawDescOnce sync.Once
-	file_SophonManifestProto_proto_rawDescData []byte
+	file_internal_protos_SophonManifestProto_proto_rawDescOnce sync.Once
+	file_internal_protos_SophonManifestProto_proto_rawDescData []byte
 )
 
-func file_SophonManifestProto_proto_rawDescGZIP() []byte {
-	file_SophonManifestProto_proto_rawDescOnce.Do(func() {
-		file_SophonManifestProto_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_SophonManifestProto_proto_rawDesc), len(file_SophonManifestProto_proto_rawDesc)))
+func file_internal_protos_SophonManifestProto_proto_rawDescGZIP() []byte {
+	file_internal_protos_SophonManifestProto_proto_rawDescOnce.Do(func() {
+		file_internal_protos_SophonManifestProto_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_internal_protos_SophonManifestProto_proto_rawDesc), len(file_internal_protos_SophonManifestProto_proto_rawDesc)))
 	})
-	return file_SophonManifestProto_proto_rawDescData
+	return file_internal_protos_SophonManifestProto_proto_rawDescData
 }
 
-var file_SophonManifestProto_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
-var file_SophonManifestProto_proto_goTypes = []any{
+var file_internal_protos_SophonManifestProto_proto_msgTypes = make([]protoimpl.MessageInfo, 3)
+var file_internal_protos_SophonManifestProto_proto_goTypes = []any{
 	(*SophonManifestProto)(nil),         // 0: SophonManifestProto
 	(*SophonManifestAssetProperty)(nil), // 1: SophonManifestAssetProperty
 	(*SophonManifestAssetChunk)(nil),    // 2: SophonManifestAssetChunk
 }
-var file_SophonManifestProto_proto_depIdxs = []int32{
+var file_internal_protos_SophonManifestProto_proto_depIdxs = []int32{
 	1, // 0: SophonManifestProto.Assets:type_name -> SophonManifestAssetProperty
 	2, // 1: SophonManifestAssetProperty.AssetChunks:type_name -> SophonManifestAssetChunk
 	2, // [2:2] is the sub-list for method output_type
@@ -265,26 +265,26 @@ var file_SophonManifestProto_proto_depIdxs = []int32{
 	0, // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_SophonManifestProto_proto_init() }
-func file_SophonManifestProto_proto_init() {
-	if File_SophonManifestProto_proto != nil {
+func init() { file_internal_protos_SophonManifestProto_proto_init() }
+func file_internal_protos_SophonManifestProto_proto_init() {
+	if File_internal_protos_SophonManifestProto_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_SophonManifestProto_proto_rawDesc), len(file_SophonManifestProto_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_internal_protos_SophonManifestProto_proto_rawDesc), len(file_internal_protos_SophonManifestProto_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   3,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_SophonManifestProto_proto_goTypes,
-		DependencyIndexes: file_SophonManifestProto_proto_depIdxs,
-		MessageInfos:      file_SophonManifestProto_proto_msgTypes,
+		GoTypes:           file_internal_protos_SophonManifestProto_proto_goTypes,
+		DependencyIndexes: file_internal_protos_SophonManifestProto_proto_depIdxs,
+		MessageInfos:      file_internal_protos_SophonManifestProto_proto_msgTypes,
 	}.Build()
-	File_SophonManifestProto_proto = out.File
-	file_SophonManifestProto_proto_goTypes = nil
-	file_SophonManifestProto_proto_depIdxs = nil
+	File_internal_protos_SophonManifestProto_proto = out.File
+	file_internal_protos_SophonManifestProto_proto_goTypes = nil
+	file_internal_protos_SophonManifestProto_proto_depIdxs = nil
 }

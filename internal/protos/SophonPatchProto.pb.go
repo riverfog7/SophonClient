@@ -2,9 +2,9 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v5.29.3
-// source: SophonPatchProto.proto
+// source: internal/protos/SophonPatchProto.proto
 
-package __
+package protos
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -31,7 +31,7 @@ type SophonPatchProto struct {
 
 func (x *SophonPatchProto) Reset() {
 	*x = SophonPatchProto{}
-	mi := &file_SophonPatchProto_proto_msgTypes[0]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -43,7 +43,7 @@ func (x *SophonPatchProto) String() string {
 func (*SophonPatchProto) ProtoMessage() {}
 
 func (x *SophonPatchProto) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[0]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -56,7 +56,7 @@ func (x *SophonPatchProto) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonPatchProto.ProtoReflect.Descriptor instead.
 func (*SophonPatchProto) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{0}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *SophonPatchProto) GetPatchAssets() []*SophonPatchAssetProperty {
@@ -85,7 +85,7 @@ type SophonPatchAssetProperty struct {
 
 func (x *SophonPatchAssetProperty) Reset() {
 	*x = SophonPatchAssetProperty{}
-	mi := &file_SophonPatchProto_proto_msgTypes[1]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -97,7 +97,7 @@ func (x *SophonPatchAssetProperty) String() string {
 func (*SophonPatchAssetProperty) ProtoMessage() {}
 
 func (x *SophonPatchAssetProperty) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[1]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -110,7 +110,7 @@ func (x *SophonPatchAssetProperty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonPatchAssetProperty.ProtoReflect.Descriptor instead.
 func (*SophonPatchAssetProperty) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{1}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *SophonPatchAssetProperty) GetAssetName() string {
@@ -151,7 +151,7 @@ type SophonPatchAssetInfo struct {
 
 func (x *SophonPatchAssetInfo) Reset() {
 	*x = SophonPatchAssetInfo{}
-	mi := &file_SophonPatchProto_proto_msgTypes[2]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -163,7 +163,7 @@ func (x *SophonPatchAssetInfo) String() string {
 func (*SophonPatchAssetInfo) ProtoMessage() {}
 
 func (x *SophonPatchAssetInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[2]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -176,7 +176,7 @@ func (x *SophonPatchAssetInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonPatchAssetInfo.ProtoReflect.Descriptor instead.
 func (*SophonPatchAssetInfo) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{2}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *SophonPatchAssetInfo) GetVersionTag() string {
@@ -211,7 +211,7 @@ type SophonPatchAssetChunk struct {
 
 func (x *SophonPatchAssetChunk) Reset() {
 	*x = SophonPatchAssetChunk{}
-	mi := &file_SophonPatchProto_proto_msgTypes[3]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -223,7 +223,7 @@ func (x *SophonPatchAssetChunk) String() string {
 func (*SophonPatchAssetChunk) ProtoMessage() {}
 
 func (x *SophonPatchAssetChunk) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[3]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -236,7 +236,7 @@ func (x *SophonPatchAssetChunk) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonPatchAssetChunk.ProtoReflect.Descriptor instead.
 func (*SophonPatchAssetChunk) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{3}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *SophonPatchAssetChunk) GetPatchName() string {
@@ -319,7 +319,7 @@ type SophonUnusedAssetProperty struct {
 
 func (x *SophonUnusedAssetProperty) Reset() {
 	*x = SophonUnusedAssetProperty{}
-	mi := &file_SophonPatchProto_proto_msgTypes[4]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -331,7 +331,7 @@ func (x *SophonUnusedAssetProperty) String() string {
 func (*SophonUnusedAssetProperty) ProtoMessage() {}
 
 func (x *SophonUnusedAssetProperty) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[4]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -344,7 +344,7 @@ func (x *SophonUnusedAssetProperty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonUnusedAssetProperty.ProtoReflect.Descriptor instead.
 func (*SophonUnusedAssetProperty) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{4}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *SophonUnusedAssetProperty) GetVersionTag() string {
@@ -370,7 +370,7 @@ type SophonUnusedAssetInfo struct {
 
 func (x *SophonUnusedAssetInfo) Reset() {
 	*x = SophonUnusedAssetInfo{}
-	mi := &file_SophonPatchProto_proto_msgTypes[5]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -382,7 +382,7 @@ func (x *SophonUnusedAssetInfo) String() string {
 func (*SophonUnusedAssetInfo) ProtoMessage() {}
 
 func (x *SophonUnusedAssetInfo) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[5]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -395,7 +395,7 @@ func (x *SophonUnusedAssetInfo) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonUnusedAssetInfo.ProtoReflect.Descriptor instead.
 func (*SophonUnusedAssetInfo) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{5}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{5}
 }
 
 func (x *SophonUnusedAssetInfo) GetAssets() []*SophonUnusedAssetFile {
@@ -416,7 +416,7 @@ type SophonUnusedAssetFile struct {
 
 func (x *SophonUnusedAssetFile) Reset() {
 	*x = SophonUnusedAssetFile{}
-	mi := &file_SophonPatchProto_proto_msgTypes[6]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -428,7 +428,7 @@ func (x *SophonUnusedAssetFile) String() string {
 func (*SophonUnusedAssetFile) ProtoMessage() {}
 
 func (x *SophonUnusedAssetFile) ProtoReflect() protoreflect.Message {
-	mi := &file_SophonPatchProto_proto_msgTypes[6]
+	mi := &file_internal_protos_SophonPatchProto_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -441,7 +441,7 @@ func (x *SophonUnusedAssetFile) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use SophonUnusedAssetFile.ProtoReflect.Descriptor instead.
 func (*SophonUnusedAssetFile) Descriptor() ([]byte, []int) {
-	return file_SophonPatchProto_proto_rawDescGZIP(), []int{6}
+	return file_internal_protos_SophonPatchProto_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *SophonUnusedAssetFile) GetFileName() string {
@@ -465,11 +465,11 @@ func (x *SophonUnusedAssetFile) GetFileMd5() string {
 	return ""
 }
 
-var File_SophonPatchProto_proto protoreflect.FileDescriptor
+var File_internal_protos_SophonPatchProto_proto protoreflect.FileDescriptor
 
-const file_SophonPatchProto_proto_rawDesc = "" +
+const file_internal_protos_SophonPatchProto_proto_rawDesc = "" +
 	"\n" +
-	"\x16SophonPatchProto.proto\"\x8f\x01\n" +
+	"&internal/protos/SophonPatchProto.proto\"\x8f\x01\n" +
 	"\x10SophonPatchProto\x12;\n" +
 	"\vPatchAssets\x18\x01 \x03(\v2\x19.SophonPatchAssetPropertyR\vPatchAssets\x12>\n" +
 	"\fUnusedAssets\x18\x02 \x03(\v2\x1a.SophonUnusedAssetPropertyR\fUnusedAssets\"\xb1\x01\n" +
@@ -511,22 +511,22 @@ const file_SophonPatchProto_proto_rawDesc = "" +
 	"\x15SophonUnusedAssetFile\x12\x1a\n" +
 	"\bFileName\x18\x01 \x01(\tR\bFileName\x12\x1a\n" +
 	"\bFileSize\x18\x02 \x01(\x03R\bFileSize\x12\x18\n" +
-	"\aFileMd5\x18\x03 \x01(\tR\aFileMd5B\x03Z\x01.b\x06proto3"
+	"\aFileMd5\x18\x03 \x01(\tR\aFileMd5B3Z1github.com/riverfog7/SophonClient/internal/protosb\x06proto3"
 
 var (
-	file_SophonPatchProto_proto_rawDescOnce sync.Once
-	file_SophonPatchProto_proto_rawDescData []byte
+	file_internal_protos_SophonPatchProto_proto_rawDescOnce sync.Once
+	file_internal_protos_SophonPatchProto_proto_rawDescData []byte
 )
 
-func file_SophonPatchProto_proto_rawDescGZIP() []byte {
-	file_SophonPatchProto_proto_rawDescOnce.Do(func() {
-		file_SophonPatchProto_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_SophonPatchProto_proto_rawDesc), len(file_SophonPatchProto_proto_rawDesc)))
+func file_internal_protos_SophonPatchProto_proto_rawDescGZIP() []byte {
+	file_internal_protos_SophonPatchProto_proto_rawDescOnce.Do(func() {
+		file_internal_protos_SophonPatchProto_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_internal_protos_SophonPatchProto_proto_rawDesc), len(file_internal_protos_SophonPatchProto_proto_rawDesc)))
 	})
-	return file_SophonPatchProto_proto_rawDescData
+	return file_internal_protos_SophonPatchProto_proto_rawDescData
 }
 
-var file_SophonPatchProto_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
-var file_SophonPatchProto_proto_goTypes = []any{
+var file_internal_protos_SophonPatchProto_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
+var file_internal_protos_SophonPatchProto_proto_goTypes = []any{
 	(*SophonPatchProto)(nil),          // 0: SophonPatchProto
 	(*SophonPatchAssetProperty)(nil),  // 1: SophonPatchAssetProperty
 	(*SophonPatchAssetInfo)(nil),      // 2: SophonPatchAssetInfo
@@ -535,7 +535,7 @@ var file_SophonPatchProto_proto_goTypes = []any{
 	(*SophonUnusedAssetInfo)(nil),     // 5: SophonUnusedAssetInfo
 	(*SophonUnusedAssetFile)(nil),     // 6: SophonUnusedAssetFile
 }
-var file_SophonPatchProto_proto_depIdxs = []int32{
+var file_internal_protos_SophonPatchProto_proto_depIdxs = []int32{
 	1, // 0: SophonPatchProto.PatchAssets:type_name -> SophonPatchAssetProperty
 	4, // 1: SophonPatchProto.UnusedAssets:type_name -> SophonUnusedAssetProperty
 	2, // 2: SophonPatchAssetProperty.AssetInfos:type_name -> SophonPatchAssetInfo
@@ -549,26 +549,26 @@ var file_SophonPatchProto_proto_depIdxs = []int32{
 	0, // [0:6] is the sub-list for field type_name
 }
 
-func init() { file_SophonPatchProto_proto_init() }
-func file_SophonPatchProto_proto_init() {
-	if File_SophonPatchProto_proto != nil {
+func init() { file_internal_protos_SophonPatchProto_proto_init() }
+func file_internal_protos_SophonPatchProto_proto_init() {
+	if File_internal_protos_SophonPatchProto_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_SophonPatchProto_proto_rawDesc), len(file_SophonPatchProto_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_internal_protos_SophonPatchProto_proto_rawDesc), len(file_internal_protos_SophonPatchProto_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
-		GoTypes:           file_SophonPatchProto_proto_goTypes,
-		DependencyIndexes: file_SophonPatchProto_proto_depIdxs,
-		MessageInfos:      file_SophonPatchProto_proto_msgTypes,
+		GoTypes:           file_internal_protos_SophonPatchProto_proto_goTypes,
+		DependencyIndexes: file_internal_protos_SophonPatchProto_proto_depIdxs,
+		MessageInfos:      file_internal_protos_SophonPatchProto_proto_msgTypes,
 	}.Build()
-	File_SophonPatchProto_proto = out.File
-	file_SophonPatchProto_proto_goTypes = nil
-	file_SophonPatchProto_proto_depIdxs = nil
+	File_internal_protos_SophonPatchProto_proto = out.File
+	file_internal_protos_SophonPatchProto_proto_goTypes = nil
+	file_internal_protos_SophonPatchProto_proto_depIdxs = nil
 }
