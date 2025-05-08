@@ -29,7 +29,6 @@ type Args struct {
 func main() {
 	var args Args
 	arg.MustParse(&args)
-	fmt.Println(args.Download)
 
 	switch {
 	case args.ManifestInfo != nil:
