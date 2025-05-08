@@ -97,12 +97,6 @@ startDownload:
 		cancel()
 	}()
 
-	// Create chunk output directory
-	chunkOutPath := filepath.Join(outputDir, "chunk_collapse")
-	if err := os.MkdirAll(chunkOutPath, 0755); err != nil {
-		fmt.Printf("Error creating directory: %v\n", err)
-	}
-
 	// Delete temp files
 	files, _ := filepath.Glob(filepath.Join(outputDir, "*_tempUpdate"))
 	for _, f := range files {
