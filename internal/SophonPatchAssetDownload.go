@@ -308,7 +308,7 @@ func (asset *SophonPatchAsset) innerWriteChunkCopy(
 
 		// Set up the source stream, handling compression if needed
 		var sourceStream io.Reader = resp.Body
-		if currentSophonChunkInfo.IsUseCompression {
+		if currentSophonChunkInfo.IsUseCompression != 0 {
 			zReader, err = zstd.NewReader(resp.Body)
 			if err != nil {
 				cleanup()

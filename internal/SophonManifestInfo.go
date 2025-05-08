@@ -7,7 +7,7 @@ type SophonManifestInfo struct {
 	ManifestBaseUrl        string
 	ManifestId             string
 	ManifestChecksumMd5    string
-	IsUseCompression       bool
+	IsUseCompression       int
 	ManifestSize           int64
 	ManifestCompressedSize int64
 }
@@ -33,7 +33,7 @@ func CreateManifestInfo(
 	manifestBaseUrl string,
 	manifestChecksumMd5 string,
 	manifestId string,
-	isUseCompression bool,
+	isUseCompression int,
 	manifestSize int64,
 	manifestCompressedSize int64,
 ) *SophonManifestInfo {

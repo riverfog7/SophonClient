@@ -87,8 +87,8 @@ type SophonManifestUrlInfo struct {
 	EncryptionPassword string `json:"password"`
 	UrlPrefix          string `json:"url_prefix"`
 	UrlSuffix          string `json:"url_suffix"`
-	IsEncrypted        bool   `json:"encryption"`
-	IsCompressed       bool   `json:"compression"`
+	IsEncrypted        int    `json:"encryption"`
+	IsCompressed       int    `json:"compression"`
 }
 
 // SophonManifestChunkInfo structure

@@ -449,7 +449,7 @@ func (asset *SophonAsset) innerWriteStreamTo(
 			currentSourceStream = resp.Body
 
 			// Apply zstd decompression if needed
-			if asset.SophonChunksInfo.IsUseCompression {
+			if asset.SophonChunksInfo.IsUseCompression != 0 {
 				zReader, err = zstd.NewReader(resp.Body)
 				if err != nil {
 					cleanup()
@@ -459,7 +459,7 @@ func (asset *SophonAsset) innerWriteStreamTo(
 			}
 
 		case CachedLocal:
-			if asset.SophonChunksInfo.IsUseCompression {
+			if asset.SophonChunksInfo.IsUseCompression != 0 {
 				zReader, err = zstd.NewReader(sourceStream)
 				if err != nil {
 					cleanup()

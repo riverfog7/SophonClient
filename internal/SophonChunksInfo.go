@@ -10,7 +10,7 @@ type SophonChunksInfo struct {
 	FilesCount          int
 	TotalSize           int64
 	TotalCompressedSize int64
-	IsUseCompression    bool
+	IsUseCompression    int
 }
 
 // Equals checks if two SophonChunksInfo instances are equal
@@ -35,7 +35,7 @@ func (s *SophonChunksInfo) GetHashCode() uint32 {
 	h.Write([]byte{byte(s.FilesCount), byte(s.FilesCount >> 8), byte(s.FilesCount >> 16), byte(s.FilesCount >> 24)})
 	h.Write([]byte{byte(s.TotalSize), byte(s.TotalSize >> 8), byte(s.TotalSize >> 16), byte(s.TotalSize >> 24)})
 	h.Write([]byte{byte(s.TotalCompressedSize), byte(s.TotalCompressedSize >> 8), byte(s.TotalCompressedSize >> 16), byte(s.TotalCompressedSize >> 24)})
-	if s.IsUseCompression {
+	if s.IsUseCompression != 0 {
 		h.Write([]byte{1})
 	} else {
 		h.Write([]byte{0})
@@ -66,7 +66,7 @@ func (s *SophonChunksInfo) CopyWithNewBaseUrl(newBaseUrl string) *SophonChunksIn
 //
 // Returns:
 //   - A new SophonChunksInfo instance
-func CreateChunksInfo(chunksBaseUrl string, chunksCount int, filesCount int, isUseCompression bool, totalSize int64, totalCompressedSize int64) *SophonChunksInfo {
+func CreateChunksInfo(chunksBaseUrl string, chunksCount int, filesCount int, isUseCompression int, totalSize int64, totalCompressedSize int64) *SophonChunksInfo {
 	return &SophonChunksInfo{
 		ChunksBaseUrl:       chunksBaseUrl,
 		ChunksCount:         chunksCount,

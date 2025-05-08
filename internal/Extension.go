@@ -252,7 +252,7 @@ func ReadProtoFromManifestInfo(httpClient *http.Client, manifestInfo *SophonMani
 	var reader io.Reader = resp.Body
 
 	// Handle decompression if needed
-	if manifestInfo.IsUseCompression {
+	if manifestInfo.IsUseCompression != 0 {
 		zReader, err := zstd.NewReader(resp.Body)
 		if err != nil {
 			return err
