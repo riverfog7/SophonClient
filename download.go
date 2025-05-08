@@ -34,31 +34,12 @@ func usageHelpDownload() int {
 	return 1
 }
 
-func DownloadCommand() int {
-	threads := runtime.NumCPU()
-	maxHttpHandle := 128
-
-	if len(os.Args) < 4 {
-		return usageHelpDownload()
-	}
-
-	buildURL := os.Args[2]
-	matchingField := os.Args[3]
-	outputDir := os.Args[4]
-
-	if len(os.Args) > 5 {
-		if t, err := strconv.Atoi(os.Args[5]); err == nil {
-			threads = t
-			fmt.Printf("Thread count has been set to: %d for downloading!\n", threads)
-		}
-	}
-
-	if len(os.Args) > 6 {
-		if m, err := strconv.Atoi(os.Args[6]); err == nil {
-			maxHttpHandle = m
-			fmt.Printf("HTTP Client maximum connection has been set to: %d handles!\n", maxHttpHandle)
-		}
-	}
+func DownloadCommand(URL string, FieldName string, Path string, ThreadCount int, MaxConnections int) int {
+	threads := ThreadCount
+	maxHttpHandle := MaxConnections
+	buildURL := URL
+	matchingField := FieldName
+	outputDir := Path
 
 	// Setup logger
 	internal.LogHandler = func(sender interface{}, log internal.LogStruct) {
@@ -164,6 +145,7 @@ cleanup:
 	client.CloseIdleConnections()
 
 	if isRetry {
+		currentRead = atomic.Uint64{}
 		goto startDownload
 	}
 

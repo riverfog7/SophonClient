@@ -9,4 +9,8 @@ require (
 	google.golang.org/protobuf v1.36.6
 )
 
-require github.com/google/go-cmp v0.6.0 // indirect
+require (
+	github.com/alexflint/go-arg v1.5.1 // indirect
+	github.com/alexflint/go-scalar v1.2.0 // indirect
+	github.com/google/go-cmp v0.6.0 // indirect
+)
