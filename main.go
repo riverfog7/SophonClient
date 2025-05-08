@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"flag"
 	"fmt"
 	"github.com/riverfog7/SophonClient/internal"
 	"io"
@@ -24,21 +25,57 @@ type SophonInformation struct {
 	Assets                []internal.SophonAsset           `json:"assets"`
 }
 
-func usageHelp() int {
-	executableName := filepath.Base(os.Args[0])
-	fmt.Printf("%s [Sophon Build URL] [Path to Dumped JSON or - to stdout]\n\n", executableName)
-	fmt.Println(`To get your Branch URL, you can either use Proxy or Sniffing tool. The format of the URL would be as follow:
-https://[domain_to_getBuild]/[path_to_getBuild]?plat_app=[your_plat_app_id]&branch=[main|predownload]&password=[your_password]&package_id=[your_package_id]&tag=[your_3dot_separated_game_version]`)
-	return 1
-}
-
 func main() {
-	if len(os.Args) < 2 {
-		os.Exit(usageHelp())
+	// Define global flags if needed
+	flag.Usage = func() {
+		executableName := filepath.Base(os.Args[0])
+		fmt.Printf("Usage: %s <command> [arguments]\n\n", executableName)
+		fmt.Println("Commands:")
+		fmt.Println("  manifestinfo <url> <outputpath>   Fetch and output manifest information")
+		fmt.Println("  download <url> <field name> <path> [threadcount] [maxconnections]   Download assets")
+		fmt.Println("\nRun 'sophonclient <command> -help' for more information on a command")
 	}
 
-	branchInfoURL := os.Args[1]
-	outputPath := os.Args[2]
+	flag.Parse()
+
+	// Check if a subcommand is provided
+	if len(os.Args) < 2 {
+		flag.Usage()
+		os.Exit(1)
+	}
+
+	// Get the subcommand
+	cmd := os.Args[1]
+
+	// Skip the subcommand for the remaining arguments
+	args := os.Args[2:]
+
+	// Execute the appropriate command
+	switch cmd {
+	case "manifestinfo":
+		if len(args) < 2 {
+			fmt.Println("Usage: sophonclient manifestinfo <url> <outputpath>")
+			fmt.Println("  <outputpath> can be '-' to output to stdout")
+			os.Exit(1)
+		}
+		// Call the original main function's logic with the appropriate args
+		runManifestInfo(args[0], args[1])
+	case "download":
+		if len(args) < 3 {
+			fmt.Println("Usage: sophonclient download <url> <field name> <path> [threadcount] [maxconnections]")
+			os.Exit(1)
+		}
+		// Call the download function with the appropriate args
+		DownloadCommand()
+	default:
+		fmt.Printf("Unknown command: %s\n", cmd)
+		flag.Usage()
+		os.Exit(1)
+	}
+}
+
+// runManifestInfo contains the logic from the original main function
+func runManifestInfo(branchInfoURL, outputPath string) {
 	writeToConsole := outputPath == "-"
 
 	// Create HTTP client
@@ -114,15 +151,11 @@ func getSophonBranchInfo(client *http.Client, url string) (*internal.SophonManif
 }
 
 func createChunkManifestInfoPair(client *http.Client, url, matchingField string) (*internal.SophonChunkManifestInfoPair, error) {
-	// Implementation depends on your Sophon library port
-	// This should call the equivalent of SophonManifest.CreateSophonChunkManifestInfoPair
 	httpClient := internal.NewSophonHTTPClient(client)
 	return httpClient.CreateSophonChunkManifestInfoPair(context.Background(), url, matchingField)
 }
 
 func enumerateAssets(client *http.Client, infoPair *internal.SophonChunkManifestInfoPair) ([]internal.SophonAsset, error) {
-	// Implementation depends on your Sophon library port
-	// This should call the equivalent of SophonManifest.EnumerateAsync
 	res, err := internal.Enumerate(context.Background(), client, infoPair, nil)
 	lst := make([]internal.SophonAsset, 0)
 	if err == nil {
