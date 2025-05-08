@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/alexflint/go-arg"
 	"os"
+	"runtime"
 )
 
 // Define command structs
@@ -38,10 +39,10 @@ func main() {
 		cmd := args.Download
 		// Set default values if not provided
 		if cmd.ThreadCount <= 0 {
-			cmd.ThreadCount = 0 // Will use default in DownloadCommand
+			cmd.ThreadCount = runtime.NumCPU() // Use number of CPU cores
 		}
 		if cmd.MaxConnections <= 0 {
-			cmd.MaxConnections = 0 // Will use default in DownloadCommand
+			cmd.MaxConnections = 128 // Default max connections
 		}
 
 		DownloadCommand(cmd.URL, cmd.FieldName, cmd.Path, cmd.ThreadCount, cmd.MaxConnections)
