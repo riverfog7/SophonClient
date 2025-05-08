@@ -360,6 +360,9 @@ func (asset *SophonAsset) innerWriteChunkCopy(
 		defer resp.Body.Close()
 
 		// Create buffer for downloading
+		if asset.BufferSize == 0 { //dirty fix
+			asset.BufferSize = 256 << 10 // Default buffer size
+		}
 		buffer := make([]byte, asset.BufferSize)
 
 		// Download and write loop

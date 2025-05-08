@@ -370,6 +370,9 @@ func (asset *SophonAsset) innerWriteStreamTo(
 	}
 
 	// Buffer for downloading
+	if asset.BufferSize == 0 { //dirty fix
+		asset.BufferSize = 256 << 10 // Default buffer size
+	}
 	buffer := make([]byte, asset.BufferSize)
 
 	// Main download loop with retries
